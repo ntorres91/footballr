@@ -39,6 +39,7 @@ GEM
     coffee-script-source (1.8.0)
     erubis (2.7.0)
     execjs (2.2.2)
+    geocoder (1.2.6)
     hike (1.2.3)
     i18n (0.6.11)
     jbuilder (2.2.5)
@@ -50,8 +51,11 @@ GEM
     json (1.8.1)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    metaclass (0.0.4)
     mime-types (2.4.3)
     minitest (5.4.3)
+    mocha (1.1.0)
+      metaclass (~> 0.0.1)
     monban (0.1.1)
       bcrypt
       rails
@@ -59,6 +63,7 @@ GEM
     monban-generators (0.0.4)
       monban (>= 0.0.12)
     multi_json (1.10.1)
+    nifty-generators (0.4.6)
     pg (0.17.1)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -118,10 +123,13 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  geocoder
   jbuilder (~> 2.0)
   jquery-rails
+  mocha
   monban
   monban-generators
+  nifty-generators
   pg
   rails (= 4.1.6)
   sass-rails (~> 4.0.3)
