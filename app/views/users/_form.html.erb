@@ -1,7 +1,3 @@
-<html>
-<body background="SoccerBG.jpg">
-
-
 
 <%= form_for(@user, url: '/users', method: :patch) do |f| %>
   <% if @user.errors.any? %>
@@ -42,7 +38,7 @@
           "lat": <%= @user.latitude %>,
           "lng": <%= @user.longitude %>,
           "picture": {
-            "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png
+            "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
             "width":  36,
             "height": 36
           },
@@ -58,6 +54,3 @@
     <%= f.submit %>
   </div>
 <% end %>
-</body>
-</html>
-
