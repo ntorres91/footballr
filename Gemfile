@@ -21,3 +21,4 @@ gem 'spring',        group: :development
 
 
 gem "mocha", group: :test
+gem 'byebug'

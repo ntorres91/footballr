@@ -1,5 +1,5 @@
 <h1>New user</h1>
 
-<%= render 'form' %>
+<%= render partial: '/application/sign_up', locals: { user: @user } %>
 
-<%= link_to 'Back', users_path %>
+<%= link_to 'Back', dashboard_path %>
