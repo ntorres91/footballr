@@ -2,7 +2,7 @@ require "monban/constraints/signed_in"
 
 
 Rails.application.routes.draw do
-constraints Monban::Constraints::SignedIn.new do
+  constraints Monban::Constraints::SignedIn.new do
     root "dashboards#show", as: :dashboard
   end
 
@@ -14,7 +14,4 @@ constraints Monban::Constraints::SignedIn.new do
   resources :maps, only: [:show]
   resources :locations, only: [:show, :create, :index, :edit, :destroy]
 
-  end
-
-
-
+end

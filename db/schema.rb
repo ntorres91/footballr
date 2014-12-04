@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20141204164624) do
     t.string   "username",        null: false
     t.string   "email",           null: false
     t.string   "password_digest", null: false
+    t.string   "address"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.float    "latitude"

@@ -26,7 +26,9 @@ class UsersController < ApplicationController
   end
 
   def update
-    update_attributes(:longitude, :latitude)
+    @user = current_user
+    current_user.update_attributes(update_user_params)
+    redirect_to edit_users_path
   end
 
   private
@@ -36,6 +38,6 @@ class UsersController < ApplicationController
   end
 
   def update_user_params
-    params.require(:user).permit(:longitude, :latitude)
+    params.require(:user).permit(:address)
   end
 end
