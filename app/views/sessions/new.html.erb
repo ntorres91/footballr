@@ -9,7 +9,7 @@
       <%= render "sign_in" %>
     </div>
     <div class="home-form">
-      <%= render "sign_up", user: @user %>
+      <%= render partial: '/application/sign_up', locals: { user: @user} %>
     </div>
   </div>
 </div>

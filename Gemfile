@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'geocoder'
+gem 'gmaps4rails'
 gem 'rails', '4.1.6'
 gem 'pg'
 gem 'monban'
@@ -20,3 +21,4 @@ gem 'spring',        group: :development
 
 
 gem "mocha", group: :test
+gem 'byebug'

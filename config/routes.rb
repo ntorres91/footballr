@@ -9,8 +9,9 @@ Rails.application.routes.draw do
   root "homes#show"
 
   resource :session, only: [:new, :create, :destroy]
-  resources :users, only: [:new, :create]
+  resource :users
+
+  resources :maps, only: [:show]
   resources :locations, only: [:show, :create, :index, :edit, :destroy]
   end
 end
-
