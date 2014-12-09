@@ -14,4 +14,4 @@ Rails.application.routes.draw do
   resources :maps, only: [:show]
   resources :locations, only: [:show, :create, :index, :edit, :destroy]
   end
-end
+
