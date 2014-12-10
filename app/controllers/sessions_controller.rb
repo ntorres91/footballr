@@ -2,14 +2,16 @@ class SessionsController < ApplicationController
   skip_before_action :require_login, only: [:new, :create]
 
   def new
+    @user = User.new
   end
 
   def create
-    user = authenticate_session(session_params)
+    @user = authenticate_session(session_params)
 
-    if sign_in(user)
+    if sign_in(@user)
       redirect_to root_path
     else
+      @user = User.new
       render :new
     end
   end
