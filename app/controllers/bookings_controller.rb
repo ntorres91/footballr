@@ -6,8 +6,7 @@ class BookingsController < ApplicationController
   end
 
   def create
-
-    @booking = event.bookings.create(booking_params)
+    @booking = event.bookings.build(booking_params)
     if @booking.save
       redirect_to [event, @booking]
     else
