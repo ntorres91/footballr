@@ -19,10 +19,32 @@ class EventsController < ApplicationController
     end
   end
 
+  def edit
+    @event = Event.find params[:id]
+  end
+
+  def update
+    @event = Event.find params[:id]
+    if @event.update_attributes(event_params)
+      redirect_to events_path
+    else
+      render :edit
+    end
+  end
+
+  def nearby
+    @events = Event.near([current_user.latitude, current_user.longitude], 10)
+  end
+
+  def destroy
+    Event.find(params[:id]).destroy
+    redirect_to events_path
+  end
+
   private
 
   def event_params
-    params.require(:event).permit(:title)
+    params.require(:event).permit(:title, :starts_at, :ends_at, :description, :address)
   end
 
 end
