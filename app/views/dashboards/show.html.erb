@@ -4,8 +4,9 @@
 
 <p>
 <%= text_field_tag :search, params[:search] %>
-<%= submit_tag "Borough Search", :name => nil %>
+<%= submit_tag "Search", :name => nil %>
 </p>
 
 
-<%=link_to "Enter Field Address", edit_users_path %>
+<%=link_to "Create New Field Post", edit_users_path %>
+<%=link_to "Near Fields", near_fields_path %>

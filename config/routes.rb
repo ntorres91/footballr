@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   resources :maps, only: [:show]
   resources :locations, only: [:show, :create, :index, :edit, :destroy]
+  get '/nearfields', to: 'near_fields#index', as: :near_fields
 
   resources :events do
     resources :bookings
