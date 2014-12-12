@@ -27,17 +27,13 @@ class UsersController < ApplicationController
 
   def update
     @user = current_user
-    current_user.update_attributes(update_user_params)
+    current_user.update_attributes(user_params)
     redirect_to edit_users_path
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:username, :email, :password)
-  end
-
-  def update_user_params
-    params.require(:user).permit(:address)
+    params.require(:user).permit(:username, :email, :password, :address)
   end
 end

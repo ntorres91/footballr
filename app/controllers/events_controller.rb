@@ -1,5 +1,4 @@
 class EventsController < ApplicationController
-
   def index
     @events = current_user.events
   end
@@ -41,10 +40,13 @@ class EventsController < ApplicationController
     redirect_to events_path
   end
 
+  def show
+    @event = Event.find(params[:id])
+  end
+
   private
 
   def event_params
     params.require(:event).permit(:title, :starts_at, :ends_at, :description, :address)
   end
-
 end
