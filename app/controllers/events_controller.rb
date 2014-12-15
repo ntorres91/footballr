@@ -47,6 +47,8 @@ class EventsController < ApplicationController
   def join_game
     @event = Event.find(params[:event_id])
     @event.users << current_user
+
+
     redirect_to event_path(@event)
   end
 
