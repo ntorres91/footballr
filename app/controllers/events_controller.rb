@@ -44,6 +44,18 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
   end
 
+  def join_game
+    @event = Event.find(params[:event_id])
+    @event.users << current_user
+    redirect_to event_path(@event)
+  end
+
+  def leave_game
+    @event = Event.find(params[:event_id])
+    @event.users.delete(current_user)
+    redirect_to event_path(@event)
+  end
+
   private
 
   def event_params

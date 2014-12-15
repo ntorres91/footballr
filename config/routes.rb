@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   get '/neargames', to: 'events#nearby', as: :near_games
 
   resources :events do
+    post 'join_game'
+    post 'leave_game'
     resources :bookings
   end
 end
