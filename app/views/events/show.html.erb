@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Address</th>
+      <th>Starts</th>
+      <th>Ends</th>
+      <th>Created By</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><%= @event.title %></td>
+        <td><%= @event.address %></td>
+        <td><%= @event.starts_at %></td>
+        <td><%= @event.ends_at %></td>
+        <td><%= @event.user.username%></td>
+      </tr>
+  </tbody>
+</table>
+
+<%= link_to "Back", dashboard_path %>

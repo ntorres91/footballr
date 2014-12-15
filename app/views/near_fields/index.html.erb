@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Borough</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @fields.each do |field| %>
+      <tr>
+        <td><%= field.name %></td>
+        <td><%= field.address %></td>
+        <td><%= field.borough %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
