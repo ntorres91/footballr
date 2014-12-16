@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
-    @events = current_user.events
+    @events = Event.all
   end
 
   def new
@@ -46,15 +46,13 @@ class EventsController < ApplicationController
 
   def join_game
     @event = Event.find(params[:event_id])
-    @event.users << current_user
-
-
+    @event.add_player(current_user)
     redirect_to event_path(@event)
   end
 
   def leave_game
     @event = Event.find(params[:event_id])
-    @event.users.delete(current_user)
+    @event.player_left(current_user)
     redirect_to event_path(@event)
   end
 
@@ -64,3 +62,6 @@ class EventsController < ApplicationController
     params.require(:event).permit(:title, :starts_at, :ends_at, :description, :address)
   end
 end
+
+
+

@@ -5,4 +5,12 @@ class Event < ActiveRecord::Base
 
   geocoded_by :address
   after_validation :geocode
+
+  def add_player(user)
+    users << user
+  end
+
+  def player_left(user)
+    users.delete(user)
+  end
 end
