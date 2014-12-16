@@ -1,6 +1,6 @@
 <h1>DASHBOARD</h1>
 
-<h3> Enter An Address, Find A Field and Start Playing!</h3>
+<h3> Enter An Address, Find A Game and Kick It!</h3>
 
 
 <br><%=link_to "Enter Your Address", edit_users_path %></br>
@@ -8,6 +8,9 @@
 <br><%=link_to "Games", events_path %></br>
 <br><%=link_to "Games Near You", near_games_path%></br>
 
+<br>
+<img src="http://svite-league-apps-content.s3.amazonaws.com/2166/3125/bg_pier5.jpg" alt="Kick It!!" width="900" height="350">
+</br>
 
 <br><p><%= text_field_tag :search, params[:search] %>
 <%= submit_tag "Search", :name => nil %></p></br>
