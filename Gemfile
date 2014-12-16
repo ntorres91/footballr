@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'geocoder'
+gem 'neat'
 gem 'gmaps4rails'
 gem 'rails', '4.1.6'
 gem 'pg'
@@ -14,6 +15,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'underscore-rails'
 gem 'jbuilder', '~> 2.0'
+gem 'sass'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'spring',        group: :development
