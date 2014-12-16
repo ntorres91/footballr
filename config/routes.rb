@@ -13,12 +13,12 @@ Rails.application.routes.draw do
 
   resources :maps, only: [:show]
   resources :locations, only: [:show, :create, :index, :edit, :destroy]
-  get '/nearfields', to: 'near_fields#index', as: :near_fields
-  get '/neargames', to: 'events#nearby', as: :near_games
+  get '/nearfields', to: "near_fields#index", as: :near_fields
+  get '/neargames', to: "events#nearby", as: :near_games
 
   resources :events do
-    post 'join_game'
-    post 'leave_game'
+    post "join_game"
+    post "leave_game"
     resources :bookings
   end
 end
