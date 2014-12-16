@@ -1,4 +1,4 @@
 class FieldAddress < ActiveRecord::Base
   geocoded_by :address
-  after_validation :geocode   # auto-fetch coordinates
+  after_validation :geocode
 end

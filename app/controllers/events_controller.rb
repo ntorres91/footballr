@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
-    @events = current_user.events
+    @events = Event.all
   end
 
   def new
@@ -42,6 +42,18 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+  end
+
+  def join_game
+    @event = Event.find(params[:event_id])
+    @event.add_player(current_user)
+    redirect_to event_path(@event)
+  end
+
+  def leave_game
+    @event = Event.find(params[:event_id])
+    @event.player_left(current_user)
+    redirect_to event_path(@event)
   end
 
   private
