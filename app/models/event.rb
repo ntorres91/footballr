@@ -13,4 +13,8 @@ class Event < ActiveRecord::Base
   def player_left(user)
     users.delete(user)
   end
+
+  def playing?(user)
+    users.include?(user)
+  end
 end
