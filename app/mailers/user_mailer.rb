@@ -1,8 +1,11 @@
 class UserMailer < ActionMailer::Base
   default from: "notifications@example.com"
 
-  def welcome_email (user)
+  def welcome_email(user)
     @user = user
-    mail(to: @user.email, subject: 'Welcome to Footballr!, Come Around and Kick It')
+    mail(
+      to: @user.email,
+      subject: "Welcome to Footballr!, Come Around and Kick It"
+      )
   end
 end
