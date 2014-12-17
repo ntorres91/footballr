@@ -18,7 +18,7 @@
       </tr>
   </tbody>
 </table>
-<% if @event.player?(current_user) %>
+<% if @event.playing?(current_user) %>
   <%= button_to(
   'Leave Game',
     event_leave_game_path(@event),
