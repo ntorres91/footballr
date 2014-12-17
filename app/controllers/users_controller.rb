@@ -9,8 +9,8 @@ class UsersController < ApplicationController
     @user = sign_up(user_params)
 
     if @user.valid?
-
       sign_in(@user)
+      UserMailer.welcome_email(@user).deliver
       redirect_to root_path
     else
       render :new

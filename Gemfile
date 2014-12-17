@@ -18,8 +18,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sass'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-gem 'spring',        group: :development
-
+group :development do
+  gem 'spring'
+  gem 'letter_opener'
+end
 
 
 
