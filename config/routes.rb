@@ -16,8 +16,8 @@ Rails.application.routes.draw do
   get "/nearfields", to: "near_fields#index", as: :near_fields
   get "/neargames", to: "events#nearby", as: :near_games
 
-  post "/friends/search", to: 'friends#search',  as: 'search_friends'
-  get "/friends/search", to: 'friends#search'
+  post "/friends/search", to: "friends#search",  as: "search_friends"
+  get "/friends/search", to: "friends#search"
 
   resources :events do
     post "join_game"
