@@ -1,5 +1,5 @@
-class FriendsController < ApplicationController
-  def search
+class FriendSearchController < ApplicationController
+  def index
     @users = User.all
     if !params[:username].blank?
       @users = @users.where("username Like ?", "%#{params[:username]}%")
@@ -10,3 +10,4 @@ class FriendsController < ApplicationController
     end
   end
 end
+

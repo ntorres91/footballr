@@ -1,7 +1,7 @@
-<%= form_tag search_friends_path do %>
-  <%= label_tag :username, 'Username' %>
+<%= form_tag friend_search_index_path, method: :get do %>
+  <%= "Username" %>
   <%= text_field_tag :username, params[:username] %>
-  <%= label_tag :email, 'Email' %>
+  <%= "Email" %>
   <%= text_field_tag :email, params[:email] %>
   <%= submit_tag "Search Friend", :name => nil %></p></br>
 <% end %>

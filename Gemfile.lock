@@ -66,11 +66,8 @@ GEM
       launchy (~> 2.2)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
-    metaclass (0.0.4)
     mime-types (2.4.3)
     minitest (5.4.3)
-    mocha (1.1.0)
-      metaclass (~> 0.0.1)
     monban (0.1.1)
       bcrypt
       rails
@@ -149,7 +146,6 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   letter_opener
-  mocha
   monban
   monban-generators
   neat
