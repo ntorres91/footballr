@@ -18,8 +18,6 @@ Rails.application.routes.draw do
 
   resources :friend_search, only: [:index]
 
-  post "/friends/search", to: "friends#search",  as: "search_friends"
-
   resources :events do
     post "join_game"
     post "leave_game"
