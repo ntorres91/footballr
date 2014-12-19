@@ -10,4 +10,3 @@ class FriendSearchController < ApplicationController
     end
   end
 end
-
